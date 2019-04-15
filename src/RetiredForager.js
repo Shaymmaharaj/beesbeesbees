@@ -1,3 +1,22 @@
 var RetiredForagerBee = function() {
+	Grub.call(this, this.food)
+	ForagerBee.call(this, this.treasureChest)
+	this.age = 40
+	this.job = "gamble"
+	this.canFly = false
+	this.color = 'grey'
+
 };
 
+RetiredForagerBee.prototype.forage = function(){
+	return "I am too old, let me play cards instead"
+}
+
+RetiredForagerBee.prototype.eat = function(){
+	this.prototype.eat()
+}
+
+
+RetiredForagerBee.prototype.gamble = function(treasure){
+	this.treasureChest.push(treasure)
+}
